@@ -1,0 +1,15 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# Virtual environment folders
+Lib/
+Scripts/
+pyvenv.cfg
+
+# IDE/project settings
+.vscode/
+.idea/
+
+# Optional: JSON or large data files (if you want to exclude them)
+# power_electronics_questions.json
