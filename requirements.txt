@@ -1,4 +1,4 @@
-NumPy: 1.26.4;
-SciPy: 1.13.1;
-python-telegram-bot: 20.3;
-huggingface-hub: 0.34.2;
+numpy==1.26.4
+scipy==1.13.1
+python-telegram-bot==20.3
+huggingface-hub==0.34.2
