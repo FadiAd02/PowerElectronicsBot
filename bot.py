@@ -6,23 +6,17 @@ from telegram.ext import Application, CommandHandler, MessageHandler, filters, C
 import rectifier_functionstwo
 from huggingface_hub import HfFolder
 
-# Hugging Face API token
-
 import os
 from huggingface_hub import login
+from huggingface_hub import InferenceClient
 
 # Get token from environment variable
 token = os.environ.get('HUGGING_FACE_TOKEN')
-login(token=token)  # Pass token explicitly
+if not token:
+    raise ValueError("HUGGING_FACE_TOKEN environment variable not set")
 
-# huggingface_api_token = HfFolder.get_token()
-
-
-if not huggingface_api_token:
-    raise ValueError("No Hugging Face token found. Log in with 'huggingface-cli login' or set HUGGINGFACE_API_TOKEN environment variable.")
-
-client = InferenceClient(model="meta-llama/Meta-Llama-3-8B-Instruct", token=huggingface_api_token)
-
+login(token=token)
+client = InferenceClient(model="meta-llama/Meta-Llama-3-8B-Instruct", token=token)
 # Telegram bot token
 TELEGRAM_BOT_TOKEN = "7801211720:AAGT8uy67sSFA2Pa-1LWNeEXCMbA-5aUGUY"
 
