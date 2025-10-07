@@ -10,7 +10,7 @@ from huggingface_hub import HfFolder
 
 
 from huggingface_hub import login
-login(token="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")
+login()
 
 huggingface_api_token = HfFolder.get_token()
 
