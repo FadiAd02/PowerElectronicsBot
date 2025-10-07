@@ -8,11 +8,14 @@ from huggingface_hub import HfFolder
 
 # Hugging Face API token
 
-
+import os
 from huggingface_hub import login
-login()
 
-huggingface_api_token = HfFolder.get_token()
+# Get token from environment variable
+token = os.environ.get('HUGGING_FACE_TOKEN')
+login(token=token)  # Pass token explicitly
+
+# huggingface_api_token = HfFolder.get_token()
 
 
 if not huggingface_api_token:
