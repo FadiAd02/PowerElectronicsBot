@@ -1,0 +1,718 @@
+[
+{
+"Problem": "The half-wave rectifier circuit of Fig. 3-1a has vs(t) = 170 sin(377t) V and a load resistance R = 15 Ω.",
+"Classification & Category": "Half-wave rectifier with resistive load",
+"Parameters": {
+"vm": 170,
+"f": 60,
+"r": 15
+},
+"Required Outputs": [
+"average load current",
+"rms load current",
+"power absorbed by the load",
+"apparent power supplied by the source",
+"power factor"
+]
+},
+{
+"Problem": "The half-wave rectifier circuit of Fig. 3-1a has a transformer inserted between the source and the remainder of the circuit. The source is 240 V rms at 60 Hz, and the load resistor is 20 Ω.",
+"Classification & Category": "Half-wave rectifier with transformer and resistive load",
+"Parameters": {
+"vs_rms": 240,
+"f": 60,
+"r": 20,
+"i_0": 12
+},
+"Required Outputs": [
+"turns ratio of the transformer",
+"average current in the primary winding of the transformer"
+]
+},
+{
+"Problem": "A half-wave rectifier has a source of 120 V rms at 60 Hz and an RL load with R = 12 Ω and L = 12 mH.",
+"Classification & Category": "Half-wave rectifier with RL load (standard outputs)",
+"Parameters": {
+"vs_rms": 120,
+"f": 60,
+"r": 12,
+"l": 0.012
+},
+"Required Outputs": [
+"expression for load current",
+"average current",
+"power absorbed by the resistor",
+"power factor"
+]
+},
+{
+"Problem": "A half-wave rectifier has a source of 240 V rms at 60 Hz and an RL load with R = 15 Ω and L = 80 mH.",
+"Classification & Category": "Half-wave rectifier with RL load (PSpice)",
+"Parameters": {
+"vs_rms": 240,
+"f": 60,
+"r": 15,
+"l": 0.08
+},
+"Required Outputs": [
+"expression for load current",
+"average current",
+"power absorbed by the resistor",
+"power factor",
+"PSpice simulation comparison with analytical results"
+]
+},
+{
+"Problem": "A half-wave rectifier has a 240 V rms, 60 Hz ac source. The load is a series inductance, resistance, and dc source, with L = 75 mH, R = 10 Ω, and Vdc = 100 V.",
+"Classification & Category": "Half-wave rectifier with RL source load",
+"Parameters": {
+"vs_rms": 240,
+"f": 60,
+"l": 0.075,
+"r": 10,
+"vdc": 100
+},
+"Required Outputs": [
+"power absorbed by the dc voltage source",
+"power absorbed by the resistance",
+"power factor"
+]
+},
+{
+"Problem": "A half-wave rectifier has a 120 V rms, 60 Hz ac source. The load is a series inductance and dc voltage with L = 100 mH and Vdc = 48 V.",
+"Classification & Category": "Half-wave rectifier with L and DC source load",
+"Parameters": {
+"vs_rms": 120,
+"f": 60,
+"l": 0.1,
+"vdc": 48
+},
+"Required Outputs": [
+"power absorbed by the dc voltage source"
+]
+},
+{
+"Problem": "The half-wave rectifier with a freewheeling diode has R = 12 Ω and L = 60 mH. The source is 120 V rms at 60 Hz.",
+"Classification & Category": "Half-wave rectifier with freewheeling diode and RL load",
+"Parameters": {
+"vs_rms": 120,
+"f": 60,
+"r": 12,
+"l": 0.06
+},
+"Required Outputs": [
+"dc component of the current",
+"amplitudes of the first four nonzero ac terms in the Fourier series"
+]
+},
+{
+"Problem": "The half-wave rectifier with a freewheeling diode has R = 4 Ω and a source with Vm = 50 V at 60 Hz.",
+"Classification & Category": "Half-wave rectifier with freewheeling diode and RL load (PSpice)",
+"Parameters": {
+"Vm": 50,
+"f": 60,
+"R": 4,
+"percent_limit": 5
+},
+"Required Outputs": [
+"value of L such that amplitude of first ac current term is less than 5% of dc current",
+"PSpice verification and peak-to-peak current"
+]
+},
+{
+"Problem": "The circuit is similar to a half-wave rectifier with freewheeling diode except that a dc source has been added to the load. The circuit has vs(t) = 170 sin(377t) V, R = 10 Ω, and Vdc = 24 V.",
+"Classification & Category": "Half-wave rectifier with freewheeling diode and DC source load",
+"Parameters": {
+"Vm": 170,
+"f": 60,
+"R": 10,
+"Vdc": 24,
+"delta_i_pp":1.0
+},
+"Required Outputs": [
+"value of L such that peak-to-peak variation in load current is no more than 1 A",
+"power absorbed by the dc source",
+"power absorbed by the resistor"
+]
+},
+{
+"Problem": "A half-wave rectifier with a capacitor filter has Vm = 200 V, R = 1 kΩ, C = 1000 μF, and ω = 377 rad/s.",
+"Classification & Category": "Half-wave rectifier with capacitor filter (single resistance)",
+"Parameters": {
+"vm": 200,
+"r": 1000,
+"c": 0.001,
+"omega": 377
+},
+"Required Outputs": [
+"ratio of RC time constant to period of input sine wave",
+"peak-to-peak ripple voltage using exact equations",
+"ripple using approximate formula"
+]
+},
+{
+  "Problem": "A half-wave rectifier with a capacitor filter has Vm = 200 V, C = 1000 μF, and ω = 377 rad/s.",
+  "Classification & Category": "Half-wave rectifier with capacitor filter (dual-resistance analysis)",
+  "Parameters": {
+    "Vm": 200,
+    "C": 0.001,
+    "omega": 377,
+    "R1": 100,
+    "R2": 10
+  },
+  "Required Outputs": [
+    "analysis with R = 100 Ω",
+    "analysis with R = 10 Ω",
+    "comment on results comparing exact and approximate ripple calculations"
+  ]
+},
+{ 
+"Problem": "A half-wave rectifier with a 1-kΩ load has a parallel capacitor. The source is 120 V rms, 60 Hz.", 
+"Classification & Category": "Half-wave rectifier with dual capacitor filter", 
+"Parameters": { 
+"Vs_rms": 120, 
+"f": 60, 
+"R": 1000, 
+"C1":4000, 
+"C2":20 
+}, 
+"Required Outputs": [ 
+"peak-to-peak ripple voltage with C = 4000 μF",
+"peak-to-peak ripple voltage with C = 20 μF",
+"assessment of approximation validity for each case" 
+] 
+},
+{
+  "Problem": "A half-wave rectifier has a 120 V rms, 60 Hz ac source. The load is 750 Ω. Determine the value of the filter capacitor to keep the peak-to-peak ripple across the load less than 2 V, the average diode current, and the peak diode current.",
+  "Classification & Category": "Half-wave rectifier with capacitor filter (ripple & diode currents)",
+  "Parameters": {
+    "Vs_rms": 120,
+    "f": 60,
+    "R": 750,
+    "delta_V0": 2
+  },
+  "Required Outputs": [
+    "value of filter capacitor to keep peak-to-peak ripple across load to less than 2 V",
+    "average diode current",
+    "peak diode current"
+  ]
+},
+{
+  "Problem": "A half-wave rectifier has a 120 V rms, 60 Hz ac source. The load is 50 W. Determine the value of the filter capacitor to keep the peak-to-peak ripple across the load less than 1.5 V, the average diode current, and the peak diode current.",
+  "Classification & Category": "Half-wave rectifier with capacitor filter (ripple & diode currents and load power provided)",
+  "Parameters": {
+    "Vs_rms": 120,
+    "f": 60,
+    "P_load": 50,
+    "delta_V0": 1.5
+  },
+  "Required Outputs": [
+    "value of filter capacitor to keep peak-to-peak ripple across load to less than 1.5 V",
+    "average diode current",
+    "peak diode current"
+  ]
+},
+{
+  "Problem": "For the controlled half-wave rectifier with resistive load, the source is 120 V rms at 60 Hz. The resistance is 100 Ω, and the delay angle α is 45°.",
+  "Classification & Category": "Controlled half-wave rectifier with resistive load",
+  "Parameters": {
+    "Vs_rms": 120,
+    "f": 60,
+    "R": 100,
+    "alpha": 45
+  },
+  "Required Outputs": [
+    "average voltage across the resistor",
+    "power absorbed by the resistor",
+    "power factor as seen by the source"
+  ]
+},
+{
+  "Problem": "A controlled half-wave rectifier has an ac source of 240 V rms at 60 Hz. The load is a 30 Ω resistor.",
+  "Classification & Category": "Controlled half-wave rectifier with resistive load (delay-angle required)",
+  "Parameters": {
+    "Vs_rms": 240,
+    "f": 60,
+    "R": 30,
+    "I_avg": 2.5
+  },
+  "Required Outputs": [
+    "delay angle for average load current of 2.5 A",
+    "power absorbed by the load",
+    "power factor"
+  ]
+},
+{
+"Problem": "A controlled half-wave rectifier has a 120 V rms 60 Hz ac source. The series RL load has R = 25 Ω and L = 50 mH. The delay angle is 30°.",
+"Classification & Category": "Controlled half-wave rectifier with RL load",
+"Parameters": {
+"vs_rms": 120,
+"f": 60,
+"R": 25,
+"L": 0.05,
+"alpha_deg": 30
+},
+"Required Outputs": [
+"expression for load current",
+"average load current",
+"power absorbed by the load"
+]
+},
+{
+"Problem": "Half-Wave Rectifier with RL-Source Load. For the circuit of Fig. 3-5a, R = 2 Ω, L = 20 mH, and Vdc = 100 V. The ac source is 120 V rms at 60 Hz.",
+"Classification & Category": "Half-wave rectifier with RL source load",
+"Parameters": {
+"vs_rms": 120,
+"f": 60,
+"R": 2,
+"L": 0.02,
+"Vdc": 100
+},
+"Required Outputs": [
+"expression for the current in the circuit",
+"power absorbed by the resistor",
+"power absorbed by the dc source",
+"power supplied by the ac source and power factor"
+]
+},
+{
+"Problem": "A controlled half-wave rectifier has a 120 V, 60 Hz ac source. The load is a series inductance, resistance, and dc source, with L = 100 mH, R = 12 Ω, and Vdc = 48 V. The delay angle is 50°.",
+"Classification & Category": "Controlled half-wave rectifier with RLDC load",
+"Parameters": {
+"Vrms": 120,
+"f": 60,
+"L": 0.1,
+"R": 12,
+"Vdc": 48,
+"alpha_deg": 50
+},
+"Required Outputs": [
+"power absorbed by the dc voltage source",
+"power absorbed by the resistance",
+"power factor"
+]
+},
+{
+  "Problem": "Develop an expression for the current in a controlled half-wave rectifier with a series inductance L and a DC source Vdc. Given: Vm = 100 V, L = 35 mH, Vdc = 24 V, ω = 377 rad/s, delay angle α = 75°.",
+  "Classification & Category": "Controlled half-wave rectifier with series L and DC source (LDC)",
+  "Parameters": {
+    "Vm": 100,
+    "L": 0.035,
+    "Vdc": 24,
+    "omega": 377,
+    "alpha": 75
+  },
+  "Required Outputs": [
+    "expression for current",
+    "average current"
+  ]
+},
+{
+  "Problem": "A single-phase full-wave bridge rectifier has a resistive load of 18 Ω and an AC source of 120-V rms.",
+  "Classification & Category": "Single-phase full-wave bridge rectifier with resistive load",
+  "Parameters": {
+    "R": 18,
+    "Vrms": 120
+  },
+  "Required Outputs": [
+    "average load current",
+    "peak load current",
+    "rms load current",
+    "average diode current",
+    "peak diode current",
+    "rms diode current"
+  ]
+},
+{
+"Problem": "A single-phase rectifier has a resistive load of 25 Ω. Determine the average current and peak reverse voltage across each of the diodes for (a) a bridge rectifier with an AC source of 120 V rms and 60 Hz and (b) a center-tapped transformer rectifier with 120 V rms on each half of the secondary winding.",
+"Classification & Category": "Single-phase rectifier comparison",
+"Parameters": {
+"R": 25,
+"Vrms": 120,
+"f": 60
+},
+"Required Outputs": [
+"average load current",
+"peak reverse voltage (PIV) for bridge rectifier",
+"average load current",
+"peak reverse voltage (PIV) for center-tapped rectifier"
+]
+},
+{
+"Problem": "A single-phase bridge rectifier has an RL load with R = 15 Ω and L = 60 mH. The AC source is v_s = 100 sin (377t) V.",
+"Classification & Category": "Single-phase bridge rectifier with RL load (standard outputs)",
+"Parameters": {
+"Vm": 100,
+"omega": 377,
+"R": 15,
+"L": 0.06
+},
+"Required Outputs": [
+"average load current",
+"rms load current",
+"average diode current",
+"rms diode current"
+]
+},
+{
+  "Problem": "A single-phase bridge rectifier has an RL load with R = 15 Ω and L = 30 mH. The AC source is 120 V rms, 60 Hz.",
+  "Classification & Category": "Single-phase bridge rectifier with RL load (power & power factor in the outputs)",
+  "Parameters": {
+    "Vrms": 120,
+    "f": 60,
+    "R": 15,
+    "L": 0.03
+  },
+  "Required Outputs": [
+    "average load current",
+    "rms load current",
+    "power absorbed by the load",
+    "power factor",
+    "average diode current",
+    "rms diode current"
+  ]
+},
+{
+  "Problem": "A full wave bridge rectifier has an RL load with R = 15 Ω and L = 30 mH. The AC source is 120 V rms, 60 Hz.",
+  "Classification & Category": "Full wave bridge rectifier with RL load (power & power factor in the outputs)",
+  "Parameters": {
+    "Vrms": 120,
+    "f": 60,
+    "R": 15,
+    "L": 0.03
+  },
+  "Required Outputs": [
+    "average load current",
+    "rms load current",
+    "power absorbed by the load",
+    "power factor",
+    "average diode current",
+    "rms diode current"
+  ]
+},
+{
+  "Problem": "A full wave rectifier has an RL load with R = 15 Ω and L = 30 mH. The AC source is 120 V rms, 60 Hz.",
+  "Classification & Category": "Full wave rectifier with RL load (power & power factor in the outputs)",
+  "Parameters": {
+    "Vrms": 120,
+    "f": 60,
+    "R": 15,
+    "L": 0.03
+  },
+  "Required Outputs": [
+    "average load current",
+    "rms load current",
+    "power absorbed by the load",
+    "power factor",
+    "average diode current",
+    "rms diode current"
+  ]
+},
+{
+  "Problem": "A single-phase center-tapped transformer rectifier has an AC source of 240 V rms and 60 Hz. The overall transformer turns ratio is 3:1 (80 V between the extreme ends of the secondary and 40 V on each tap). The load is a resistance of 4 Ω.",
+  "Classification & Category": "Single-phase center-tapped transformer rectifier with resistive load",
+  "Parameters": {
+    "Vrms_primary": 240,
+    "Vrms_secondary_tap": 40,
+    "f": 60,
+    "R": 4,
+    "turns_ratio": "3:1"
+  },
+  "Required Outputs": [
+    "average load current",
+    "RMS load current",
+    "average source current",
+    "RMS source current"
+  ]
+},
+{
+"Problem": "Design a center-tapped transformer rectifier to produce an average current of 10.0 A in a 15 Ω resistive load. Both 120- and 240-V rms 60-Hz sources are available.",
+"Classification & Category": "Single-phase center-tapped transformer rectifier design with resistive load",
+"Parameters": {
+"I_avg_desired": 10,
+"R": 15,
+"source1": 120,
+"source2": 240,
+"f": 60
+},
+"Required Outputs": [
+"source voltage selection",
+"transformer turns ratio"
+]
+},
+{
+  "Problem": "Design a center-tapped transformer rectifier to produce an average current of 5.0 A in an RL load with R = 10 Ω and L = 50 mH. Both 120- and 240-V rms 60-Hz sources are available.",
+  "Classification & Category": "Single-phase center-tapped transformer rectifier design with RL load",
+  "Parameters": {
+    "I_avg_desired": 5,
+    "R": 10,
+    "L": 0.05,
+    "source1": 120,
+    "source2": 2400,
+    "f": 60
+  },
+  "Required Outputs": [
+    "source voltage selection",
+    "transformer turns ratio"
+  ]
+},
+{
+"Problem": "An electromagnet is modeled as a 200-mH inductance in series with a 4 Ω resistance. The average current in the inductance must be 10 A to establish the required magnetic field. Determine the amount of additional series resistance required to produce the required average current from a bridge rectifier supplied from a single-phase 120-V, 60-Hz source.",
+"Classification & Category": "Single-phase full-wave bridge rectifier with RL load design",
+"Parameters": {
+"L": 0.2,
+"R_existing": 4,
+"I_avg_desired": 10,
+"Vrms": 120,
+"f": 60
+},
+"Required Outputs": [
+"additional series resistance required"
+]
+},
+{
+  "Problem": "The full-wave rectifier of Fig. 4-3a has v_s(t) = 170 sin(omega t) V, R = 3 ohm, L = 15 mH, Vdc = 48 V, and omega = 2*pi*60 rad/s.",
+  "Classification & Category": "Full-wave rectifier with RL load and DC source",
+  "Parameters": {
+    "Vm": 170,
+    "f": 60,
+    "R": 3,
+    "L": 0.015,
+    "Vdc": 48
+  },
+  "Required Outputs": [
+    "power absorbed by the dc source",
+    "power absorbed by the resistor",
+    "power factor",
+    "peak-to-peak variation in the load current"
+  ]
+},
+{
+  "Problem": "The single-phase full-wave bridge rectifier of Fig. 4-5a has an RL-source load with R = 4 Ω, L = 40 mH, and Vdc = 24 V. The ac source is 120 V rms at 60 Hz.",
+  "Classification & Category": "Single-phase full-wave bridge rectifier with RL-source load",
+  "Parameters": {
+    "Vrms": 120,
+    "f": 60,
+    "R": 4,
+    "L": 0.04,
+    "Vdc": 24
+  },
+  "Required Outputs": [
+    "power absorbed by the dc source",
+    "power absorbed by the resistor",
+    "power factor",
+    "peak-to-peak variation in the load current"
+  ]
+},
+{
+"Problem": "The full-wave rectifier of Fig. 4-6 has a 120-V rms 60 Hz source and a load resistance of 200 Ω. Determine the filter capacitance required to limit the peak-to-peak output voltage ripple to 1 percent of the dc output.",
+"Classification & Category": "Full-wave rectifier with resistive load and capacitor filter",
+"Parameters": {
+"Vrms": 120,
+"f": 60,
+"R": 200,
+"ripple_percentage": 1
+},
+"Required Outputs": [
+"filter capacitance",
+"peak diode current",
+"average diode current"
+]
+},
+{
+"Problem": "The full-wave rectifier of Fig. 4-6 has a 60-Hz ac source with Vm = 100 V. It is to supply a load that requires a dc voltage of 100 V and will draw 0.5 A. Determine the filter capacitance required to limit the peak-to-peak output voltage ripple to 1 percent of the dc output.",
+"Classification & Category": "Full-wave rectifier with capacitive filter from Vm",
+"Parameters": {
+"Vm": 100,
+"f": 60,
+"Vdc_desired": 100,
+"I_dc_desired": 0.5,
+"ripple_percentage": 1
+},
+"Required Outputs": [
+"filter capacitance",
+"peak diode current",
+"average diode current"
+]
+},
+{
+"Problem": "The full-wave rectifier with an LC filter of Fig. 4-8a has a source of 120 V rms at 60 Hz, L = 10 mH, and a capacitor sufficiently large to produce a ripple-free output voltage.",
+"Classification & Category": "Full-wave rectifier with LC filter",
+"Parameters": {
+"Vrms": 120,
+"f": 60,
+"L": 0.01,
+"C": "large",
+"R1": 7,
+"R2": 20
+},
+"Required Outputs": [
+"output voltage for R = 7 Ω",
+"output voltage for R = 20 Ω"
+]
+},
+{
+"Problem": "The controlled single-phase bridge rectifier of Fig. 4-10a has a 20-Ω resistive load and has a 120-V rms, 60-Hz ac source. The delay angle is 45°.",
+"Classification & Category": "Controlled single-phase bridge rectifier with resistive load",
+"Parameters": {
+"Vrms": 120,
+"f": 60,
+"R": 20,
+"alpha": 45
+},
+"Required Outputs": [
+"average load current",
+"rms load current",
+"rms source current",
+"power factor"
+]
+},
+{
+"Problem": "The controlled single-phase full-wave bridge rectifier of Fig. 4-11a has an RL load with R = 25 Ω and L = 50 mH. The source is 240 V rms at 60 Hz.",
+"Classification & Category": "Controlled single-phase full-wave bridge rectifier with RL load",
+"Parameters": {
+"Vrms": 240,
+"f": 60,
+"R": 25,
+"L": 0.05,
+"alpha1_deg": 15,
+"alpha2_deg":75
+},
+"Required Outputs": [
+"average load current for α = 15°",
+"average load current for α = 75°"
+]
+},
+{
+"Problem": "A 20-Ω resistive load requires an average current that varies from 4.5 to 8.0 A. An isolation transformer is placed between a 120-V rms 60-Hz ac source and a controlled single-phase full-wave rectifier.",
+"Classification & Category": "Controlled single-phase full-wave rectifier with resistive load and isolation transformer design",
+"Parameters": {
+"R": 20,
+"I_min": 4.5,
+"I_max": 8.0,
+"Vrms_source": 120,
+"f": 60
+},
+"Required Outputs": [
+"transformer turns ratio",
+"range of delay angle"
+]
+},
+{
+"Problem": "An electromagnet is modeled as a 100-mH inductance in series with a 5-Ω resistance. The average current in the inductance must be 10 A to establish the required magnetic field. Determine the delay angle required for a controlled single-phase rectifier to produce the required average current from a single-phase 120-V, 60-Hz source.",
+"Classification & Category": "Controlled single-phase rectifier with RL load",
+"Parameters": {
+"R": 5,
+"L": 0.1,
+"I_required": 10,
+"Vrms": 120,
+"f": 60
+},
+"Required Outputs": [
+"delay angle",
+"current continuity (continuous or discontinuous)",
+"peak-to-peak current variation"
+]
+},
+{
+"Problem": "The full-wave converter used as an inverter in Fig. 4-14 has an ac source of 240 V rms at 60 Hz, R = 10 Ω, L = 0.8 H, and Vdc = −100 V. The delay angle for the converter is 105°.",
+"Classification & Category": "Full-wave converter in inverter mode with RL load",
+"Parameters": {
+"Vrms": 240,
+"f": 60,
+"R": 10,
+"L": 0.8,
+"Vdc": -100,
+"alpha_deg": 105
+},
+"Required Outputs": [
+"power supplied to the ac system from the dc source",
+"peak-to-peak ripple in load current"
+]
+},
+{
+"Problem": "An array of solar cells produces 100 V dc. A single-phase ac power system is 120 V rms at 60 Hz. (a) Determine the delay angle for the controlled converter in the arrangement of Fig. 4-14 (Vdc = −100) such that 2000 W is transmitted to the ac system. Assume L is large enough to produce a current that is nearly ripple-free. The equivalent resistance is 0.8 Ω. Assume that the converter is lossless. (b) Determine the power supplied by the solar cells. (c) Estimate the value of inductance such that the peak-to-peak variation in solar cell current is less than 2.5 A.",
+"Classification & Category": "Controlled converter for solar power integration",
+"Parameters": {
+"Vdc": 100,
+"Vrms": 120,
+"f": 60,
+"P_required": 2000,
+"R": 0.8,
+"delta_I_max": 2.5
+},
+"Required Outputs": [
+"delay angle",
+"power supplied by solar cells",
+"inductance value for current ripple < 2.5A"
+]
+},
+{
+ "Problem": "An array of solar panels produces a dc voltage. Power produced by the solar panels is to be delivered to an ac power system. The method of interfacing the solar panels with the power system is via a full-wave SCR bridge as shown in Fig. 4-14 except with the dc source having the opposite polarity. Individual solar panels produce a voltage of 12 V. Therefore, the voltage from the solar panel array can be established at any multiple of 12 by connecting the panels in appropriate combinations. The ac source is (120) sin (377 12 t) V. The resistance is 1 Ω.", "Classification & Category": "Full-wave SCR bridge for solar power integration", 
+"Parameters":
+ { 
+"V_panel": 12, 
+"Vrms": 120, 
+"f": 60, 
+"P_required": 1000, 
+"R": 1, 
+"current_variation_percent":10 
+}, 
+"Required Outputs": [ 
+"Vdc (multiple of 12V)", 
+"delay angle α", 
+"inductance L", 
+"power delivered to ac system = 1000W", 
+"current variation ≤ 10% of average" ]
+ },
+{
+"Problem": "A full-wave converter operating as an inverter is used to transfer power from a wind generator to a single-phase 240-V rms 60-Hz ac system. The generator produces a dc output of 150 V and is rated at 5000 W. The equivalent resistance in the generator circuit is 0.6 Ω.",
+"Classification & Category": "Full-wave converter in inverter mode for wind power integration",
+"Parameters": {
+"Vdc": 150,
+"Vrms": 240,
+"f": 60,
+"P_rated": 5000,
+"R": 0.6,
+"current_ripple_percent":10
+},
+"Required Outputs": [
+"converter delay angle for rated power",
+"power absorbed by the ac system",
+"inductance to limit current ripple to 10%"
+]
+},
+{
+"Problem": "A three-phase rectifier is supplied by a 480-V rms line-to-line 60-Hz source. The load is a 50-Ω resistor.",
+"Classification & Category": "Three-phase rectifier with resistive load",
+"Parameters": {
+"Vrms_line": 480,
+"f": 60,
+"R": 50
+},
+"Required Outputs": [
+"average load current",
+"rms load current",
+"rms source current",
+"power factor"
+]
+},
+{
+"Problem": "A three-phase rectifier is supplied by a 480-V rms line-to-line 60-Hz source. The RL load is a 100-Ω resistor in series with a 15-mH inductor.",
+"Classification & Category": "Three-phase rectifier with RL load",
+"Parameters": {
+"Vrms_line": 480,
+"f": 60,
+"R": 100,
+"L": 0.015
+},
+"Required Outputs": [
+"average load current",
+"rms load current",
+"average diode current",
+"rms diode current",
+"rms source current",
+"power factor"
+]
+}
+]
