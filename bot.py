@@ -18,8 +18,12 @@ if not token:
 login(token=token)
 client = InferenceClient(model="meta-llama/Meta-Llama-3-8B-Instruct", token=token)
 # Telegram bot token
-TELEGRAM_BOT_TOKEN = "7801211720:AAGT8uy67sSFA2Pa-1LWNeEXCMbA-5aUGUY"
+import os
 
+# Get Telegram token from environment variable
+TELEGRAM_BOT_TOKEN = os.environ.get('TELEGRAM_BOT_TOKEN')
+if not TELEGRAM_BOT_TOKEN:
+    raise ValueError("TELEGRAM_BOT_TOKEN environment variable not set")
 # Define FUNCTION_MAP
 FUNCTION_MAP = {
     "Half-wave rectifier with resistive load": rectifier_functionstwo.half_wave_rectifier_with_resistive_load,
